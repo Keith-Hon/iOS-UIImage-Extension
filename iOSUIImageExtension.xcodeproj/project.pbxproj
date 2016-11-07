@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B65D39F51DD06401001EF176 /* iOSUIImageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B65D39F41DD06401001EF176 /* iOSUIImageExtension.m */; };
+		B65D39F51DD06401001EF176 /* iOSUIImageExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65D39F41DD06401001EF176 /* iOSUIImageExtension.mm */; };
 		B65D39F61DD06401001EF176 /* iOSUIImageExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B65D39F31DD06401001EF176 /* iOSUIImageExtension.h */; };
+		B65D3A011DD066D9001EF176 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65D3A001DD066D9001EF176 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +28,8 @@
 /* Begin PBXFileReference section */
 		B65D39F01DD06401001EF176 /* libiOSUIImageExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOSUIImageExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65D39F31DD06401001EF176 /* iOSUIImageExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSUIImageExtension.h; sourceTree = "<group>"; };
-		B65D39F41DD06401001EF176 /* iOSUIImageExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSUIImageExtension.m; sourceTree = "<group>"; };
+		B65D39F41DD06401001EF176 /* iOSUIImageExtension.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = iOSUIImageExtension.mm; sourceTree = "<group>"; };
+		B65D3A001DD066D9001EF176 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65D3A011DD066D9001EF176 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +49,7 @@
 			children = (
 				B65D39F21DD06401001EF176 /* iOSUIImageExtension */,
 				B65D39F11DD06401001EF176 /* Products */,
+				B65D39FF1DD066D9001EF176 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,9 +65,17 @@
 			isa = PBXGroup;
 			children = (
 				B65D39F31DD06401001EF176 /* iOSUIImageExtension.h */,
-				B65D39F41DD06401001EF176 /* iOSUIImageExtension.m */,
+				B65D39F41DD06401001EF176 /* iOSUIImageExtension.mm */,
 			);
 			path = iOSUIImageExtension;
+			sourceTree = "<group>";
+		};
+		B65D39FF1DD066D9001EF176 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B65D3A001DD066D9001EF176 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65D39F51DD06401001EF176 /* iOSUIImageExtension.m in Sources */,
+				B65D39F51DD06401001EF176 /* iOSUIImageExtension.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +267,7 @@
 				B65D39FB1DD06401001EF176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
