@@ -49,6 +49,7 @@
 
 }
 
+// Initiailze an UIImage object with a float array, whose memory will be released after initialization if releaseData flag is set to YES
 -(id) initWithFloats:(float*) data image_height:(int)height image_width:(int) width numberOfComponents:(int) numberOfComponents releaseData:(bool) releaseData{
     
     NSAssert(numberOfComponents == 3 || numberOfComponents == 4, @"Parameter numberOfComponents can be only either 3 or 4");
@@ -69,6 +70,7 @@
 
     }
     
+    // Release the input byte array to reclaim memory
     if (releaseData) {
         
         delete[] data;
