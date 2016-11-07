@@ -11,6 +11,10 @@
 
 @interface UIImage (UIImageExtension)
 
--(id) initWithBytes :(unsigned char*) bytes image_height:(int)height image_width:(int) width numberOfComponents:(int) numberOfComponents releaseData:(bool) releaseData;
+-(id) initWithBytes :(unsigned char*) data image_height:(int)height image_width:(int) width numberOfComponents:(int) numberOfComponents releaseData:(bool) releaseData;
+
+-(id) initWithFloats :(float*) data image_height:(int)height image_width:(int) width numberOfComponents:(int) numberOfComponents releaseData:(bool) releaseData;
+
+
 
 @end
