@@ -109,4 +109,33 @@
     
 }
 
+// Get byte array from an UIImage. The return array contains four channel with alpha value at the last channel if withAlpha is true and 255 otherwise
+-(unsigned char*) getBytes: (bool)withAlpha {
+    
+    // Output data always has four channels
+    unsigned char* outData = new unsigned char[4 * (int)self.size.height * (int)self.size.width]();
+    
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(self.CGImage);
+    
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
+    
+    if (withAlpha) {
+        
+        bitmapInfo = kCGImageAlphaPremultipliedLast | bitmapInfo;
+        
+    } else {
+        
+        bitmapInfo = kCGImageAlphaNoneSkipLast| bitmapInfo;
+    }
+    
+    CGContextRef contextRef = CGBitmapContextCreate(outData, self.size.width, self.size.height, CGImageGetBitsPerComponent(self.CGImage), CGImageGetBytesPerRow(self.CGImage), colorSpace, bitmapInfo);
+    
+    CGContextDrawImage(contextRef, CGRectMake(0, 0, self.size.width, self.size.height), self.CGImage);
+    
+    CGContextRelease(contextRef);
+    
+    return outData;
+    
+}
+
 @end

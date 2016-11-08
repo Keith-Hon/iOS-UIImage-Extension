@@ -15,6 +15,6 @@
 
 -(id) initWithFloats:(float*) data image_height:(int)height image_width:(int) width numberOfComponents:(int) numberOfComponents releaseData:(bool) releaseData setAlpha:(bool) setAlpha;
 
-
+-(unsigned char*) getBytes: (bool)withAlpha;
 
 @end
